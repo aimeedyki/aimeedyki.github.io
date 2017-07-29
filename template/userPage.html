@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <title>hello books</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<span><a style="float: right;" href="/main">Log Out</a></span>
+<body>
+    <div class="container-fluid">
+      <h1 style="color: #8B008B">WELCOME BACK!</h1>
+      <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'library')">LIBRARY</button>
+          <button class="tablinks" onclick="openTab(event, 'profile')">PROFILE</button>
+          <button class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</button>
+          <button class="tablinks" onclick="openTab(event, 'history')">HISTORY</button>
+      </div>
+      <div id="library" class="tabcontent">
+        <form class="form-search" align="center">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">Search</button>
+        </form>
+
+        <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+           <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="fjords.jpg">
+          <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+
+     
+        <div class="pagination" align="center">
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a href="#" class="active">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>
+
+      </div>
+      <div id="profile" class="tabcontent" align="center">
+        
+      </div>
+      <div id="unreturned" class="tabcontent" align="center">
+        
+      </div>
+      <div id="history" class="tabcontent" align="center">
+          <table>
+            <tr>
+                <th>Title</th>
+                <th>Date Borrowed</th>
+                <th>Date Returned</th>
+            </tr>
+            <tr>
+                <td id="title">The beautiful ones are not yet born</td>
+                <td id="dateB">12/01/2017</td>
+                <td id="dateR">16/01/2017</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
