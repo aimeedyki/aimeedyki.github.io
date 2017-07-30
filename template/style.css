@@ -47,8 +47,17 @@ div.tab {
   color: white;
 }
 
+div.tab2 {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #8B008B;
+    width: 10%;
+    height: 300px;
+    color: white;
+}
+
 /* Style the buttons inside the tab */
-div.tab button {
+div.tab button, div.tab2 button {
     background-color: inherit;
     float: center;
     border: none;
@@ -56,18 +65,19 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    text-align: left;
 }
 
 
 
 /* Change background color of buttons on hover */
-div.tab button:hover {
+div.tab button:hover, div.tab2 button:hover {
     background-color: #ddd;
     color: #8B008B;
 }
 
 /* Create an active/current tablink class */
-div.tab button.active {
+div.tab button.active, div.tab2 button.active {
     background-color: #ccc;
     color: #8B008B;
 }
@@ -95,6 +105,16 @@ input[type=text], input[type=password] {
   background-color: #8B008B;
   color: white;
 }
+
+.btn:hover{
+  background-color: #9932CC;
+  color: white;
+}
+
+.btn:active{
+  background-color: #8B008B;
+  color: white;
+}
 div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
@@ -116,7 +136,82 @@ div.desc {
     text-align: center;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    border: 1px solid #ddd;
+}
 
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+  background-color: #8B008B;
+  color: white;
+}
+
+.profile-card {
+    margin: 50px;
+    width: 500px;
+    height: 400px;
+    font: 12px "Myriad Pro";
+}
+
+.avatar{
+    border-radius: 100px;
+    border: 5px solid #8B008B;
+}
+
+.avatar:hover {
+    margin-top: 23px;
+}
+.btns-container {
+    position: relative;
+    }
+a.zoom:hover, a.edit:hover {
+    background-color: #8B008B ;
+    margin-top: 30px;
+}
+
+.profile-details {
+    color: #8B008B;
+    float: center;
+    text-align: center;
+    font-weight: bold;
+}
+.profile-content {
+    float: center;
+    margin-left: 600px;
+    margin-right: 460px;
+    }
+ul{
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8B008B;
+    color: white;
+    border-radius: 10px;
+    float: center;
+    height: 25px
+    width:20%;
+
+}
+li {
+    display: inline-block;
+    padding: 16px;
+    text-align: center;
+
+}
+.digits {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
 
 
 

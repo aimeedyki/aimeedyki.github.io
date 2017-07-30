@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
       <h1 style="color: #8B008B">WELCOME BACK!</h1>
-      <div class="tab">
+      <div class="tab2">
           <button class="tablinks" onclick="openTab(event, 'library')">LIBRARY</button>
           <button class="tablinks" onclick="openTab(event, 'profile')">PROFILE</button>
           <button class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</button>
@@ -88,14 +88,50 @@
         </div>
 
       </div>
-      <div id="profile" class="tabcontent" align="center">
-        
+      <div id="profile" class="tabcontent" class="profile-card" align="center">
+        <div class="profile-avatar">
+          <a href="#"><img src="profilephoto.jpg" class="avatar" /></a>
+          <div class="btns-container">
+            <div class="profile-links">
+                <a class="zoom" href="#"><img src="zoomicon.png"></a>
+                <a class="edit" href="#"><img src="editicon.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-details">
+                <h1>Grace Joel</h1>
+                <h3>Rookie</h3>
+        </div>
+        <div class="profile-content">
+            <ul>
+                <li>
+                    <div class="digits">11</div>
+                    Books read
+                </li>
+                <li>
+                    <div class="digits">9</div>
+                    Books returned
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
       </div>
       <div id="unreturned" class="tabcontent" align="center">
-        
+        <table cellspacing="0">
+            <tr>
+                <th>Title</th>
+                <th>Date Borrowed</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td id="title">The beautiful ones are not yet born</td>
+                <td id="dateB">12/01/2017</td>
+                <td id="return"><a>RETURN</a></td>
+            </tr>
+          </table>
       </div>
       <div id="history" class="tabcontent" align="center">
-          <table>
+          <table cellspacing="0">
             <tr>
                 <th>Title</th>
                 <th>Date Borrowed</th>
