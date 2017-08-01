@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/aimeedyki/Hello-Books/issues"
   },
-  "homepage": "https://github.com/aimeedyki/Hello-Books#readme"
+  "homepage": "https://github.com/aimeedyki/Hello-Books#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "morgan": "^1.8.2"
+  }
 }

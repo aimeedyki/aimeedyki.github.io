@@ -88,7 +88,7 @@ div.tab button.active, div.tab2 button.active {
     border-top: none;
 
 }
-.bookform label{
+/*.bookform label{
     display: inline-block;
     float: left;
     clear: left;
@@ -104,7 +104,7 @@ div.tab button.active, div.tab2 button.active {
 .bookform input . {
   display: inline-block;
   float: left;
-}
+}*/
 input[type=text], input[type=password] {
     width: 30%;
     padding: 12px 20px;
