@@ -1,27 +1,24 @@
+* { padding:0; margin:0; outline:0; }
 body {
-    font-family: 'Titillium Web', sans-serif;
-}
+  font-family: georgia, serif;
+  }
 
-#back{
-  background-image: url("books.jpg"); 
+
+#background-image{
+  background-image: url("booksbw2.jpg"); 
   background-size: cover;
-  opacity:0.6;
+   position: center;
+    top:0;
+    left:0;
+    z-index:0;
 }
-#first {
-            margin: 2em auto;
-            padding: 5px;
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            text-align: center;
-            text-shadow: 2px 2px white;
-            
-        }
 
 .pagination {
     display: inline-block;
 }
 
 .pagination a {
-    color: #8B008B;
+    color: #800080;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -30,25 +27,36 @@ body {
 }
 
 .pagination a.active {
-    background-color: #8B008B;
+    background-color: #800080;
     color: white;
-    border: 1px solid #8B008B;
+    border: 1px solid #800080;
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
-/* Style the tab */
+
 div.tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #8B008B;
+    border: 3px solid #ccc;
+    background-color: #800080;
     padding: 40px;
   max-width:600px;
   margin:40px auto;
   color: white;
+  border-radius: 15px;
+}
+
+div.tab2 {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #800080;
+    width: 10%;
+    height: 230px;
+    color: white;
+    border: 3px solid #ccc;
 }
 
 /* Style the buttons inside the tab */
-div.tab button {
+div.tab button, div.tab2 button {
     background-color: inherit;
     float: center;
     border: none;
@@ -56,20 +64,21 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    text-align: left;
 }
 
 
 
 /* Change background color of buttons on hover */
-div.tab button:hover {
+div.tab button:hover, div.tab2 button:hover , div.tab2 button:hover{
     background-color: #ddd;
-    color: #8B008B;
+    color: #800080;
 }
 
 /* Create an active/current tablink class */
-div.tab button.active {
+div.tab button.active, div.tab2 button.active {
     background-color: #ccc;
-    color: #8B008B;
+    color: #800080;
 }
 
 /* Style the tab content */
@@ -78,6 +87,7 @@ div.tab button.active {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+
 }
 
 input[type=text], input[type=password] {
@@ -92,7 +102,17 @@ input[type=text], input[type=password] {
 }
 
 .btn{
-  background-color: #8B008B;
+  background-color: #800080;
+  color: white;
+}
+
+.btn:hover{
+  background-color: #9932CC;
+  color: white;
+}
+
+.btn:active{
+  background-color: #800080;
   color: white;
 }
 div.gallery {
@@ -109,13 +129,193 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
-}
+    color:   #E9967A;
+  }
 
 div.desc {
     padding: 15px;
     text-align: center;
+    color: #800080;
+    background-color:   white;
+  }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    border: 1px solid #ddd;
 }
 
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+  background-color: #800080;
+  color: white;
+}
+
+.profile-card {
+    margin: 50px;
+    width: 500px;
+    height: 400px;
+    font: 12px "Myriad Pro";
+}
+
+.avatar{
+    border-radius: 100px;
+    border: 5px solid #800080;
+}
+
+.avatar:hover {
+    margin-top: 23px;
+}
+.btns-container {
+    position: relative;
+    }
+a.zoom:hover, a.edit:hover {
+    background-color: #800080 ;
+    margin-top: 30px;
+}
+
+div.profile-details {
+    color: white;
+    float: center;
+    margin-left: 600px;
+    margin-right: 460px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #800080;
+    border-radius: 10px
+    outline: 5px solid white;
+}
+.profile-content {
+    float: center;
+    margin-left: 600px;
+    margin-right: 460px;
+    
+    }
+ul{
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #800080;
+    color: white;
+    border-radius: 10px;
+    float: center;
+    height: 25px
+    width:20%;
+  }
+li {
+    display: inline-block;
+    padding: 16px;
+    text-align: center;
+
+}
+.digits {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+#header { 
+  height:89px; 
+  background-color: #800080; 
+  white-space:nowrap;
+  color: white;
+  border: 3px solid #ccc; 
+}
+#header h1, #header h3{
+ float:left; 
+ display:inline-block; 
+ padding-top: 8px;
+ margin-left: 3px; 
+}
+
+#top { 
+  height:53px;
+  }
+  #top-navigation { 
+    float:right; 
+    white-space:nowrap;
+    color: white;
+    padding-top:15px;
+    margin-right: 3px;
+    }
+#top-navigation a{ 
+  color:white; 
+}
+#top-navigation span{ 
+  color:#dca598; 
+}
+div.tab3 { 
+  height:53px;
+  width: 338px; 
+  float: center;
+  margin-left: 380px;
+  outline: 5px solid #800080;
+  background-color: white;
+}
+div.tab3 button{ 
+  color: #800080;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-align: left;
+  background-color: white; 
+    display: inline-block;
+  }
+
+
+div.tab3 button.active, div.tab3 button:hover { 
+  color: white; 
+  text-align: center;
+  background-color: #ff00ff;
+  font-weight: bold;
+  
+}
+
+
+#container { 
+  padding:20px 0;}
+.shell { 
+  width:988px; 
+  margin:0 auto; }
+.small-nav { color:#ff00ff; padding-bottom:20px; }
+.small-nav a{ color:#800080; }
+.msg { position:relative; padding-right:35px; margin-bottom:10px; }
+.msg p{ padding:9px 10px 9px 40px; font-size:12px; background-repeat:no-repeat; background-position:10px 5px;}
+.msg a.close{ font-size:0; line-height:0; position:absolute; top:0; right:0; width:34px; height:34px; background:url(close.gif); text-indent: -4000px;}
+
+.msg-ok p{ background-color:#ff00ff; border:solid 1px #dbd6a2; color:white; background-image:url(msg-ok.gif); }
+
+.box-head { 
+  border-radius: 20px;
+  background:#800080; 
+  height:35px; 
+  color:#fff; padding: 0 10px;
+  line-height:60px; 
+  white-space:nowrap; 
+  border-bottom:solid 2px white; }
+.box-head .right{ padding-top:5px; line-height:13px;}
+.field { border:solid 1px #d3cfc7; background:#fff; padding:5px; }
+.small-field { border:solid 1px #d3cfc7; background:#fff; padding:3px 1px; font-size:11px; }
+
+.left, .alignleft { float:left; display:inline; }
+.right, .alignright { float:right; display:inline; }
+#content { float:left; width:750px; }
+.box { background:#fbfcfc; height:100%; padding:1px; margin-bottom:20px; }
+
+
+.table th{ background:#fffdfa color:#818181; text-align: left; padding:7px 10px; border-bottom:solid 1px #d2d1cb;}
+.table td{ background:#fbfcfc;  border-bottom:solid 1px #e0e0e0; padding:8px 10px; }
+.table tr.odd td{ background:#f8f8f8; }
+.table tr:hover td{ background:#fff9e1; }
+a.ico { color:#9d9c9a; font-size:10px; text-decoration: none; padding:0 0 0 14px; background-repeat:no-repeat; background-position:0 0; }
+a.ico:hover { color:#333;}
 
 
 
