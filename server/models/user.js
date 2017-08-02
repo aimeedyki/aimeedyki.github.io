@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) =>{
     password: DataTypes.STRING,
     level: DataTypes.STRING,
     profilepic: DataTypes.STRING
-  }, {
+  }, 
+ 
+ {
     classMethods: {
       associate: (models)=> {
         // associations can be defined here

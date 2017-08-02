@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   up: (queryInterface, Sequelize)=>
     queryInterface.createTable('users', {
@@ -22,8 +23,8 @@ module.exports = {
       },
       password: {
         allowNull: false,
-        type: Sequelize.STRING
-      },
+        type: Sequelize.STRING,
+       },
       level: {
         allowNull: false,
         type: Sequelize.STRING
@@ -40,6 +41,19 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      {
+    hooks: {
+      beforeCreate: (user) => {
+        const salt = bcrypt.genSaltSync();
+        user.password = bcrypt.hashSync(user.password, salt);
+      }
+    },
+    instanceMethods: {
+      validPassword: function(password) {
+        return bcrypt.compareSync(password, this.password);
+      }
+    },
+  }   
     }),
   
   down: (queryInterface/*, Sequelize*/) => queryInterface.dropTable('users'),
