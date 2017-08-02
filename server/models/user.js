@@ -7,7 +7,19 @@ module.exports = (sequelize, DataTypes) =>{
     password: DataTypes.STRING,
     level: DataTypes.STRING,
     profilepic: DataTypes.STRING
-  }, 
+  }, {
+    hooks: {
+      beforeCreate: (user) => {
+        const salt = bcrypt.genSaltSync();
+        user.password = bcrypt.hashSync(user.password, salt);
+      }
+    },
+    instanceMethods: {
+      validPassword: function(password) {
+        return bcrypt.compareSync(password, this.password);
+      }
+    },
+  },
  
  {
     classMethods: {
