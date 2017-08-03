@@ -13,7 +13,7 @@ module.exports = {
       .then(book => res.status(201).send(book))
       .catch(error => console.log(error.message)); 
   },
-
+ //modifys book
   modify(req, res) {
     book.update({
           title: req.body.title,
@@ -27,5 +27,12 @@ module.exports = {
       .then(book => res.status(201).send("updated"))
       .catch(error => console.log(error.message)); 
   },
+  //displays all books
+  list(req, res) {
+    return book
+    .all()
+    .then(books => res.status(200).send(books))
+    .catch(error => res.status(400).send(error));
+},
 
 }

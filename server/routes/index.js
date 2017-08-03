@@ -14,4 +14,6 @@ module.exports = (app) => {
   app.post('/api/books', booksController.create );
   //route for modifying book information
   app.put('/api/books/1', booksController.modify);
+  //displays allbooks in the library
+  app.get('/api/books', booksController.list);
 };
