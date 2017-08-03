@@ -5,5 +5,9 @@ module.exports = (app) => {
     message: 'Welcome to Booksville!',
   }));
   
-  app.post('/api/user1s', user1sController.create);
+  //route for registration
+  app.post('/api/user1s/register', user1sController.create);
+  //route for login
+  app.post('/api/user1s/login', user1sController.auth);
+   
 };
