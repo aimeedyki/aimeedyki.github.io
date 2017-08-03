@@ -12,5 +12,6 @@ module.exports = (app) => {
   app.post('/api/user1s/login', user1sController.auth);
   //route for adding a book
   app.post('/api/books', booksController.create );
-   
+  //route for modifying book information
+  app.put('/api/books/1', booksController.modify);
 };
