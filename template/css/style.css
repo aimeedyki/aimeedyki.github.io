@@ -2,18 +2,18 @@
 body {
   font-family: georgia, serif;
   }
-
+/*responsiveness*/
 @media only screen and (max-width: 479px){
     body { width: 90%; }
 }
 @media screen and (max-width: 320px) { 
    #header a{
-        font-size: 80%; 
+        font-size: 50%; 
      }    
 }
 
-@media screen and (max-width: 700px) { /* for screen size less or equal to 700px*/
-#header a{
+@media screen and (max-width: 700px) { 
+ a{
     font-size: 120%; /*Changes as per your requirement*/
 } 
 }
@@ -75,7 +75,7 @@ div.tab2 {
     border: 1px solid #ccc;
     background-color: #800080;
     width: 10%;
-    height: 230px;
+    height: 240px;
     color: white;
     border: 3px solid #ccc;
 }
@@ -190,7 +190,7 @@ input[type=text], input[type=password] {
 }
 /*style for page navigation for books*/
 .pagination {
-    display: inline-block;
+    float: center;
 }
 .pagination a {
     color: #800080;
@@ -209,7 +209,6 @@ input[type=text], input[type=password] {
 /*format for displaying books*/
 div.gallery {
     margin: 5px;
-    border: 1px solid #ccc;
     float: left;
     width: 180px;
 }
@@ -218,7 +217,7 @@ div.gallery:hover {
 }
 div.gallery img {
     width: 100%;
-    height: auto;
+    height: 20%;
     color:   #E9967A;
 }
 div.desc {
