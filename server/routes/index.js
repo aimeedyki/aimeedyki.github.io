@@ -18,5 +18,9 @@ module.exports = (app) => {
   //displays allbooks in the library
   app.get('/api/books', booksController.list);
   //borrows a book history of a user
-  app.post('/api/users/userid/books', historiesController.create)
+  app.post('/api/users/:user1Id/books', historiesController.create);
+  //returns a book to the library
+  app.put('/api/users/:user1Id/books', historiesController.modify);
+  //displays history
+  app.get('/api/users/history', historiesController.list);
 };
