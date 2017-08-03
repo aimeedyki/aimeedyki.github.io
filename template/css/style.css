@@ -3,239 +3,31 @@ body {
   font-family: georgia, serif;
   }
 
+@media only screen and (max-width: 479px){
+    body { width: 90%; }
+}
+@media screen and (max-width: 320px) { 
+   #header a{
+        font-size: 80%; 
+     }    
+}
 
+@media screen and (max-width: 700px) { /* for screen size less or equal to 700px*/
+#header a{
+    font-size: 120%; /*Changes as per your requirement*/
+} 
+}
+
+/*sets background image for all pages*/
 #background-image{
-  background-image: url("booksbw2.jpg"); 
+  background-image: url("../images/booksbw2.jpg"); 
   background-size: cover;
    position: center;
     top:0;
     left:0;
     z-index:0;
 }
-
-.pagination {
-    display: inline-block;
-}
-
-.pagination a {
-    color: #800080;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-}
-
-.pagination a.active {
-    background-color: #800080;
-    color: white;
-    border: 1px solid #800080;
-}
-
-.pagination a:hover:not(.active) {background-color: #ddd;}
-
-div.tab {
-    overflow: hidden;
-    border: 3px solid #ccc;
-    background-color: #800080;
-    padding: 40px;
-  max-width:600px;
-  margin:40px auto;
-  color: white;
-  border-radius: 15px;
-}
-
-div.tab2 {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #800080;
-    width: 10%;
-    height: 230px;
-    color: white;
-    border: 3px solid #ccc;
-}
-
-/* Style the buttons inside the tab */
-div.tab button, div.tab2 button {
-    background-color: inherit;
-    float: center;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    text-align: left;
-}
-
-
-
-/* Change background color of buttons on hover */
-div.tab button:hover, div.tab2 button:hover , div.tab2 button:hover{
-    background-color: #ddd;
-    color: #800080;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active, div.tab2 button.active {
-    background-color: #ccc;
-    color: #800080;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-
-}
-/*.bookform label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-    color: white;
-    margin-top: 30px;
-}
-.bookform input {
-  display: inline-block;
-  float: left;
-}
-.bookform input . {
-  display: inline-block;
-  float: left;
-}*/
-input[type=text], input[type=password] {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    align-items: center;
-    font-size: 14px;
-}
-
-.btn{
-  background-color: #800080;
-  color: white;
-}
-
-.btn:hover{
-  background-color: #9932CC;
-  color: white;
-}
-
-.btn:active{
-  background-color: #800080;
-  color: white;
-}
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-    color:   #E9967A;
-  }
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-    color: #800080;
-    background-color:   white;
-  }
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 50%;
-    border: 1px solid #ddd;
-}
-
-th, td {
-    border: none;
-    text-align: left;
-    padding: 8px;
-}
-
-th{
-  background-color: #800080;
-  color: white;
-}
-
-.profile-card {
-    margin: 50px;
-    width: 500px;
-    height: 400px;
-    font: 12px "Myriad Pro";
-}
-
-.avatar{
-    border-radius: 100px;
-    border: 5px solid #800080;
-}
-
-.avatar:hover {
-    margin-top: 23px;
-}
-.btns-container {
-    position: relative;
-    }
-a.zoom:hover, a.edit:hover {
-    background-color: #800080 ;
-    margin-top: 30px;
-}
-
-div.profile-details {
-    color: white;
-    float: center;
-    margin-left: 600px;
-    margin-right: 460px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #800080;
-    border-radius: 10px
-    outline: 5px solid white;
-}
-.profile-content {
-    float: center;
-    margin-left: 600px;
-    margin-right: 460px;
-    
-    }
-ul{
-   list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #800080;
-    color: white;
-    border-radius: 10px;
-    float: center;
-    height: 25px
-    width:20%;
-  }
-li {
-    display: inline-block;
-    padding: 16px;
-    text-align: center;
-
-}
-.digits {
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-}
-
+/*header for all pages*/
 #header { 
   height:89px; 
   background-color: #800080; 
@@ -249,7 +41,7 @@ li {
  padding-top: 8px;
  margin-left: 3px; 
 }
-
+/*navigation icons at the top*/
 #top { 
   height:53px;
   }
@@ -266,14 +58,28 @@ li {
 #top-navigation span{ 
   color:#dca598; 
 }
-div.tab3 { 
-  height:53px;
-  width: 338px; 
-  float: center;
-  margin-left: 380px;
-  outline: 5px solid #800080;
-  background-color: white;
+/*tab for login and registration*/
+div.tab {
+    overflow: hidden;
+    border: 3px solid #ccc;
+    background-color: #800080;
+    padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+  color: white;
+  border-radius: 15px;
 }
+/*for userpage*/
+div.tab2 {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #800080;
+    width: 10%;
+    height: 230px;
+    color: white;
+    border: 3px solid #ccc;
+}
+/*for adminpage*/
 div.tab3 button{ 
   color: #800080;
     cursor: pointer;
@@ -283,22 +89,221 @@ div.tab3 button{
   background-color: white; 
     display: inline-block;
   }
-
-
+.shell { 
+  width:988px; 
+  margin:0 auto; }
+/*google plus login button*/
+.google{
+  color:white;
+  background-color: #800080;
+  width: 15%;
+  border-radius:10px;
+  border: 2px solid white;
+}
+.social-login { margin-top: 35px; color: #fff; }
+.social-login-buttons { margin-top: 20px; }
+.btn-link-1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  padding: 0;
+  background: #555;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+}
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active {
+  outline: 0; opacity: 0.6; 
+  background: #555; background: rgba(0, 0, 0, 0.3); color: #fff;
+}
+/* Style the buttons inside the tab */
+div.tab button, div.tab2 button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-align: left;
+}
+div.tab3 { 
+  height:53px;
+  width: 338px; 
+  float: center;
+  margin-left: 380px;
+  outline: 5px solid #800080;
+  background-color: white;
+}
 div.tab3 button.active, div.tab3 button:hover { 
   color: white; 
   text-align: center;
   background-color: #ff00ff;
   font-weight: bold;
-  
 }
 
+/* Change background color of buttons on hover */
+div.tab button:hover, div.tab2 button:hover , div.tab2 button:hover{
+    background-color: #ddd;
+    color: #800080;
+}
+/* Create an active/current tablink class */
+div.tab button.active, div.tab2 button.active {
+    background-color: #ccc;
+    color: #800080;
+}
+.btns-container {
+    position: relative;
+    }
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
 
+}
+input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 14px;
+}
+/*button style for submit or upload*/
+.btn{
+  background-color: #800080;
+  color: white;
+}
+.btn:hover{
+  background-color: #9932CC;
+  color: white;
+}
+.btn:active{
+  background-color: #800080;
+  color: white;
+}
+/*style for page navigation for books*/
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: #800080;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+.pagination a.active {
+    background-color: #800080;
+    color: white;
+    border: 1px solid #800080;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+/*format for displaying books*/
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+    color:   #E9967A;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: #800080;
+    background-color:   white;
+  }
+/*format for displaying table*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+th{
+  background-color: #800080;
+  color: white;
+}
+/*formating for user profile*/
+.profile-card {
+    margin: 50px;
+    width: 500px;
+    height: 400px;
+    font: 12px "Myriad Pro";
+}
+.avatar{
+    border-radius: 100px;
+    border: 5px solid #800080;
+}
+.avatar:hover {
+    margin-top: 23px;
+}
+div.profile-details {
+    color: white;
+    float: center;
+    margin-left: 600px;
+    margin-right: 460px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #800080;
+    border-radius: 10px
+    outline: 5px solid white;
+}
+.profile-content {
+    float: center;
+    margin-left: 600px;
+    margin-right: 460px;
+    
+}
+.digits {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+/*link styling*/
+a.zoom:hover, a.edit:hover {
+    background-color: #800080 ;
+    margin-top: 30px;
+}
+ul{
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #800080;
+    color: white;
+    border-radius: 10px;
+    float: center;
+    height: 25px
+    width:20%;
+  }
+li {
+    display: inline-block;
+    padding: 16px;
+    text-align: center;
+}
 #container { 
   padding:20px 0;}
-.shell { 
-  width:988px; 
-  margin:0 auto; }
+
 .small-nav { color:#ff00ff; padding-bottom:20px; }
 .small-nav a{ color:#800080; }
 .msg { position:relative; padding-right:35px; margin-bottom:10px; }
