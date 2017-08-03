@@ -1,5 +1,6 @@
 const user1sController = require('../controllers').user1s;
 const booksController = require('../controllers').books;
+const historiesController = require('../controllers').histories;
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -16,4 +17,6 @@ module.exports = (app) => {
   app.put('/api/books/1', booksController.modify);
   //displays allbooks in the library
   app.get('/api/books', booksController.list);
+  //borrows a book history of a user
+  app.post('/api/users/userid/books', historiesController.create)
 };
