@@ -17,10 +17,13 @@ module.exports = (app) => {
   app.put('/api/books/1', booksController.modify);
   //displays allbooks in the library
   app.get('/api/books', booksController.list);
-  //borrows a book history of a user
+  //borrows a book and saves to history of a user
   app.post('/api/users/:user1Id/books', historiesController.create);
-  //returns a book to the library
+  //returns a book to the library by updating date returned
   app.put('/api/users/:user1Id/books', historiesController.modify);
   //displays history
-  app.get('/api/users/history', historiesController.list);
+  app.get('/api/users/:user1Id/books', historiesController.list);
+ //display not returned
+ app.get('/api/users/:user1Id/books?returned=', historiesController.returned)
+
 };

@@ -16,9 +16,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      returned: {
+      returnedDate: {
         allowNull: true,
         type: Sequelize.DATE
+      }
+      returned: {
+        allowNull: true,
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,

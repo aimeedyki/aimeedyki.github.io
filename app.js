@@ -3,7 +3,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const passport   = require('passport');
-
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
 // Set up the express app
@@ -21,8 +21,8 @@ app.use(logger('dev'));
 //renders landing page
 
 
-
-
+const sequelize = new Sequelize("postgres://admin1:booksville@localhost:5432/library");
+sequelize.sync({ force: true });
 // Parse incoming requests data (https://github.com/expressjs/body-parser)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

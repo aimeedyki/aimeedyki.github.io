@@ -2,8 +2,10 @@
 module.exports = (sequelize, DataTypes) =>{
   const history = sequelize.define('history', {
     title: DataTypes.STRING,
+    user1Id: DataTypes.INTEGER,
     borrowed: DataTypes.DATE,
-    returned: DataTypes.DATE
+    returnDate: DataTypes.DATE,
+    return: DataTypes.BOOLEAN,
   }, {
     classMethods: {
       associate: (models) =>{
@@ -18,6 +20,7 @@ module.exports = (sequelize, DataTypes) =>{
         });
             }
     }
+    
   });
   return history;
 };
