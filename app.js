@@ -10,15 +10,16 @@ require('dotenv').config();
 const app = express();
 // sets the view engine to 
 
-app.set('views', __dirname+'/template');
+/*app.set('views', __dirname+'/template');
 app.set('view engine', '.ejs');
-app.engine('ejs', require('ejs').renderFile);
+app.engine('ejs', require('ejs').renderFile);*/
 
 
 // Logs requests to the console.
 app.use(logger('dev'));
 
 //renders landing page
+
 
 
 
@@ -31,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./server/routes')(app);
 
 
-//displays our pages
+/*displays our pages
  app.get('/',  (req, res)=> {  
   res.render('main.ejs');
 });
@@ -40,7 +41,7 @@ require('./server/routes')(app);
 });
    app.get('/adminpage',  (req, res)=> {  
   res.render('adminpage.ejs');
-});
+});*/
 
 // Setup a default catch-all route that sends back a welcome message in JSON format.
 //app.get('*', (req, res) => res.status(200).send({

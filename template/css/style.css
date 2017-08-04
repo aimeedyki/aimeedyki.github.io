@@ -2,19 +2,19 @@
 body {
   font-family: georgia, serif;
   }
-
+/*responsiveness
 @media only screen and (max-width: 479px){
     body { width: 90%; }
 }
 @media screen and (max-width: 320px) { 
    #header a{
-        font-size: 80%; 
+        font-size: 50%; 
      }    
 }
 
-@media screen and (max-width: 700px) { /* for screen size less or equal to 700px*/
-#header a{
-    font-size: 120%; /*Changes as per your requirement*/
+@media screen and (max-width: 700px) { 
+ a{
+    font-size: 120%;
 } 
 }
 
@@ -75,49 +75,18 @@ div.tab2 {
     border: 1px solid #ccc;
     background-color: #800080;
     width: 10%;
-    height: 230px;
+    height: 240px;
     color: white;
     border: 3px solid #ccc;
 }
 /*for adminpage*/
-div.tab3 button{ 
-  color: #800080;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    text-align: left;
-  background-color: white; 
-    display: inline-block;
-  }
-.shell { 
-  width:988px; 
-  margin:0 auto; }
-/*google plus login button*/
-.google{
-  color:white;
-  background-color: #800080;
-  width: 15%;
-  border-radius:10px;
-  border: 2px solid white;
-}
-.social-login { margin-top: 35px; color: #fff; }
-.social-login-buttons { margin-top: 20px; }
-.btn-link-1 {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  padding: 0;
-  background: #555;
-  background: rgba(0, 0, 0, 0.3);
-  font-size: 20px;
-    line-height: 40px;
-    color: #fff;
-    -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
-}
-.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active {
-  outline: 0; opacity: 0.6; 
-  background: #555; background: rgba(0, 0, 0, 0.3); color: #fff;
+div.tab3 { 
+  height:53px;
+  width: 376px; 
+  float: center;
+  margin-left: 380px;
+  outline: 5px solid #800080;
+  background-color: white;
 }
 /* Style the buttons inside the tab */
 div.tab button, div.tab2 button {
@@ -130,14 +99,7 @@ div.tab button, div.tab2 button {
     transition: 0.3s;
     text-align: left;
 }
-div.tab3 { 
-  height:53px;
-  width: 338px; 
-  float: center;
-  margin-left: 380px;
-  outline: 5px solid #800080;
-  background-color: white;
-}
+
 div.tab3 button.active, div.tab3 button:hover { 
   color: white; 
   text-align: center;
@@ -175,6 +137,45 @@ input[type=text], input[type=password] {
     align-items: center;
     font-size: 14px;
 }
+div.tab3 button{ 
+  color: #800080;
+    cursor: pointer;
+    padding: 14px 16px;
+    text-align: left;
+  background-color: white; 
+    display: inline-block;
+  }
+.shell { 
+  width:988px; 
+  margin:0 auto; }
+/*google plus login button*/
+.google{
+  color:white;
+  background-color: #800080;
+  width: 15%;
+  border-radius:10px;
+  border: 2px solid white;
+}
+.social-login { margin-top: 35px; color: #fff; }
+.social-login-buttons { margin-top: 20px; }
+.btn-link-1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  padding: 0;
+  background: #555;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+}
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active {
+  outline: 0; opacity: 0.6; 
+  background: #555; background: rgba(0, 0, 0, 0.3); color: #fff;
+}
+
 /*button style for submit or upload*/
 .btn{
   background-color: #800080;
@@ -190,7 +191,7 @@ input[type=text], input[type=password] {
 }
 /*style for page navigation for books*/
 .pagination {
-    display: inline-block;
+    float: center;
 }
 .pagination a {
     color: #800080;
@@ -209,7 +210,6 @@ input[type=text], input[type=password] {
 /*format for displaying books*/
 div.gallery {
     margin: 5px;
-    border: 1px solid #ccc;
     float: left;
     width: 180px;
 }
@@ -218,7 +218,7 @@ div.gallery:hover {
 }
 div.gallery img {
     width: 100%;
-    height: auto;
+    height: 20%;
     color:   #E9967A;
 }
 div.desc {
@@ -301,17 +301,34 @@ li {
     padding: 16px;
     text-align: center;
 }
+
 #container { 
   padding:20px 0;}
-
-.small-nav { color:#ff00ff; padding-bottom:20px; }
-.small-nav a{ color:#800080; }
-.msg { position:relative; padding-right:35px; margin-bottom:10px; }
-.msg p{ padding:9px 10px 9px 40px; font-size:12px; background-repeat:no-repeat; background-position:10px 5px;}
-.msg a.close{ font-size:0; line-height:0; position:absolute; top:0; right:0; width:34px; height:34px; background:url(close.gif); text-indent: -4000px;}
-
-.msg-ok p{ background-color:#ff00ff; border:solid 1px #dbd6a2; color:white; background-image:url(msg-ok.gif); }
-
+/*success message*/
+.msg { 
+  position:relative; 
+  padding-right:35px; 
+  margin-bottom:10px; }
+.msg p{ 
+  padding:9px 10px 9px 40px; 
+  font-size:12px; 
+  background-repeat:no-repeat; 
+  background-position:10px 5px;}
+.msg a.close{ 
+  font-size:0; 
+  line-height:0; 
+  position:absolute; 
+  top:0; right:0; 
+  width:34px; height:34px; 
+  background:url(images/close.gif); 
+  text-indent: -4000px;
+}
+.msg-ok p{ 
+  background-color:#ff00ff; 
+  border:solid 1px #dbd6a2; 
+  color:white; 
+  background-image:url(images/msg-ok.gif); }
+/*head of add book form*/
 .box-head { 
   border-radius: 20px;
   background:#800080; 
@@ -320,21 +337,41 @@ li {
   line-height:60px; 
   white-space:nowrap; 
   border-bottom:solid 2px white; }
-.box-head .right{ padding-top:5px; line-height:13px;}
-.field { border:solid 1px #d3cfc7; background:#fff; padding:5px; }
-.small-field { border:solid 1px #d3cfc7; background:#fff; padding:3px 1px; font-size:11px; }
+.box-head .right{ 
+  padding-top:5px; 
+  line-height:13px;}
+.field { border:solid 1px #d3cfc7; 
+  background:#fff; 
+  padding:5px; }
+.small-field { border:solid 1px #d3cfc7;
+ background:#fff; padding:3px 1px; font-size:11px; }
 
 .left, .alignleft { float:left; display:inline; }
 .right, .alignright { float:right; display:inline; }
 #content { float:left; width:750px; }
-.box { background:#fbfcfc; height:100%; padding:1px; margin-bottom:20px; }
 
-
-.table th{ background:#fffdfa color:#818181; text-align: left; padding:7px 10px; border-bottom:solid 1px #d2d1cb;}
-.table td{ background:#fbfcfc;  border-bottom:solid 1px #e0e0e0; padding:8px 10px; }
-.table tr.odd td{ background:#f8f8f8; }
-.table tr:hover td{ background:#fff9e1; }
-a.ico { color:#9d9c9a; font-size:10px; text-decoration: none; padding:0 0 0 14px; background-repeat:no-repeat; background-position:0 0; }
+/*style for table*/
+.table th{ 
+  background:#fffdfa 
+  color:#818181; 
+  text-align: left; 
+  padding:7px 10px; 
+  border-bottom:solid 1px #d2d1cb;}
+.table td{ 
+  background:#fbfcfc; 
+  border-bottom:solid 1px #e0e0e0; 
+  padding:8px 10px; }
+.table tr.odd td{ 
+  background:#f8f8f8; }
+.table tr:hover td{ 
+  background:#fff9e1; }
+a.ico { 
+  color:#9d9c9a; 
+  font-size:10px; 
+  text-decoration: none; 
+  padding:0 0 0 14px; 
+  background-repeat:no-repeat; 
+  background-position:0 0; }
 a.ico:hover { color:#333;}
 
 
