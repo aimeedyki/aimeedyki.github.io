@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <title>hello books</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -14,101 +14,109 @@
 </head>
 
 
-<!--<span><a style="float: right;" href="/main">Log Out</a></span> -->
+<!--head of the page-->
 <body id="background-image">
     <div class="container-fluid">
       <div id="header">
+        <div>
         <h1 style="font-family: Comic Sans MS, cursive, sans-serif;" style="color: white">WELCOME BACK!</h1>
+        </div>
         <div id="top-navigation" style="color: #8B008B;">
 				<a href="#">Help</a>
 				<span>|</span>
 				<a href="#">Profile Settings</a>
 				<span>|</span>
 				<a href="#">Log out</a>
-	    </div>
+        </div>
 	  </div>
-      <div class="tab2">
-          <button class="tablinks" onclick="openTab(event, 'library')">LIBRARY</button>
-          <button class="tablinks" onclick="openTab(event, 'profile')">PROFILE</button>
-          <button class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</button>
-          <button class="tablinks" onclick="openTab(event, 'history')">HISTORY</button>
-      </div>
-      <div id="library" class="tabcontent">
+    <!--side tab for navigation-->
+    <div class="tab2" >
+          <button style="color: white;" class="tablinks" onclick="openTab(event, 'library')">LIBRARY</button>
+          <button style="color: white;" class="tablinks" onclick="openTab(event, 'profile')">PROFILE</button>
+          <button style="color: white;" class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</button>
+          <button style="color: white;" class="tablinks" onclick="openTab(event, 'history')">HISTORY</button>
+    </div>
+    <!--displays when library button is clicked-->
+    <div id="library" class="tabcontent">
         <form class="form-search" align="center">
         <input type="text" class="input-medium search-query">
         <button type="submit" class="btn">Search</button>
         </form>
-
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-        <div class="gallery">
-          <a target="_blank">
-          <img src="dolphin.jpg" alt="Fjords" width="300" height="200">
-          </a>
-          <div class="desc">A beautiful story of a true dolphin love</div>
-          <div class="desc">3 copies available</div>
-          <button type="submit" class="btn">Borrow</button>
-        </div>
-              
-
-     
-        <div class="pagination" align="center">
+        <div class="pagination">
           <a href="#">&laquo;</a>
-          <a href="#">1</a>
-          <a href="#" class="active">2</a>
+          <a href="#" class="active">1</a>
+          <a href="#" >2</a>
           <a href="#">3</a>
           <a href="#">4</a>
           <a href="#">5</a>
           <a href="#">6</a>
           <a href="#">&raquo;</a>
         </div>
-
-      </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/magicobt.jpg" alt="The magic of big thinking" width="300" height="200">
+          </a>
+          <div class="desc">The Magic of Thinking Big</div>
+          <div class="desc">by David J. Schwartz.</br>This book gives you useful methods for getting  the most out of your job, your marriage and family life</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/dolphin.jpg" alt="little dolphin" width="300" height="200">
+          </a>
+          <div class="desc">Little Dolphin</div>
+          <div class="desc">By John Smith</br>A beautiful story of a true dolphin love. over many seas and oceans</div>
+          <div class="desc">2 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/fiftysf.png" alt="Fifty Shades Freed" width="300" height="200">
+          </a>
+          <div class="desc">Fifty Shades Freed</div>
+          <div class="desc">By E.L.James</br>the third and final installment of the erotic romance Fifty Shades Trilogy </div>
+          <div class="desc">5 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/davinci.jpg" alt="The Davinci Code" width="300" height="200">
+          </a>
+          <div class="desc">The Davinci Code</div>
+          <div class="desc">By Dan Brown</br> It follows symbologist Robert Langdon and cryptologist Sophie Neveu after a murder in the Louvre Museum in Paris</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/whistler.png" alt="Fjords" width="300" height="200">
+          </a>
+          <div class="desc">The Whistler</div>
+          <div class="desc">By John Grisham</br> It is a legal thriller about Florida Board on Judicial Conduct investigator Lacy Stoltz.</div>
+          <div class="desc">3 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <div class="gallery">
+          <a target="_blank">
+          <img src="images/PurpleHibiscus.jpg" alt="Purple Hibiscus" width="300" height="200">
+          </a>
+          <div class="desc">Purple Hibiscus</div>
+          <div class="desc">By Chimamanda Ngozi Adichie</br>Purple Hibiscus is set in postcolonial Nigeria, a country beset by political instability and economic difficulties</div>
+          <div class="desc">12 copies available</div>
+          <button type="submit" class="btn">Borrow</button>
+        </div>
+        <br>
+        
+    </div>
+   <!-- displays user profile-->
       <div id="profile" class="tabcontent" class="profile-card" align="center">
         <div class="profile-avatar">
-          <a href="#"><img src="profilephoto.jpg" class="avatar" /></a>
+          <a href="#"><img src="images/profilephoto.jpg" class="avatar" /></a>
           <div class="btns-container">
             <div class="profile-links">
-                <a class="zoom" href="#"><img src="zoomicon.png"></a>
-                <a class="edit" href="#"><img src="editicon.png"></a>
+                <a class="zoom" href="#"><img src="images/zoomicon.png"></a>
+                <a class="edit" href="#"><img src="images/editicon.png"></a>
             </div>
           </div>
         </div>
@@ -130,6 +138,7 @@
             <div class="clear"></div>
         </div>
       </div>
+      <!-- displays tab for unreturned books-->
       <div id="unreturned" class="tabcontent" align="center" style="color: #800080;
     background-color: white;">
         <table cellspacing="0">
@@ -155,6 +164,7 @@
             </tr>
         </table>
       </div>
+      <!-- displays users' history-->
       <div id="history" class="tabcontent" align="center" style="color: #800080;
     background-color: white;">
           <table cellspacing="0">
@@ -203,4 +213,3 @@
     </div>
   </div>
 </body>
-<script src="index.js"></script>

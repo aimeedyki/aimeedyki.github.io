@@ -5,8 +5,7 @@ module.exports = (sequelize, DataTypes)=> {
     image: DataTypes.STRING,
     description: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
-    category: DataTypes.STRING
-  }, {
+     }, {
     classMethods: {
       associate: (models) =>{
         // associations can be defined here

@@ -1,4 +1,6 @@
 const user1sController = require('../controllers').user1s;
+const booksController = require('../controllers').books;
+const historiesController = require('../controllers').histories;
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -9,5 +11,16 @@ module.exports = (app) => {
   app.post('/api/user1s/register', user1sController.create);
   //route for login
   app.post('/api/user1s/login', user1sController.auth);
-   
+  //route for adding a book
+  app.post('/api/books', booksController.create );
+  //route for modifying book information
+  app.put('/api/books/1', booksController.modify);
+  //displays allbooks in the library
+  app.get('/api/books', booksController.list);
+  //borrows a book history of a user
+  app.post('/api/users/:user1Id/books', historiesController.create);
+  //returns a book to the library
+  app.put('/api/users/:user1Id/books', historiesController.modify);
+  //displays history
+  app.get('/api/users/history', historiesController.list);
 };

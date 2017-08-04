@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) =>{
           as: 'Book',
         });
          history.belongsTo(models.user, {
-          foreignKey: 'userId',
+          foreignKey: 'user1Id',
           onDelete: 'CASCADE',
         });
-      }
+            }
     }
   });
   return history;
