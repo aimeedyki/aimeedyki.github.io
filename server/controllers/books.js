@@ -22,7 +22,7 @@ module.exports = {
           quantity: req.body.quantity,
           categoryId: req.body.category,
       },
-        { where: { id: req.body.id } 
+        { where: { title: req.body.title } 
       })
       .then(book => res.status(201).send("updated"))
       .catch(error => console.log(error.message)); 

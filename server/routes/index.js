@@ -24,6 +24,6 @@ module.exports = (app) => {
   //displays history
   app.get('/api/users/:user1Id/books', historiesController.list);
  //display not returned
- app.get('/api/users/:user1Id/books?returned=', historiesController.returned)
+ app.get('/api/users/:user1Id/books?returned=false', historiesController.returned)
 
 };

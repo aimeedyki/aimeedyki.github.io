@@ -16,10 +16,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      returnedDate: {
+      returnDate: {
         allowNull: true,
         type: Sequelize.DATE
-      }
+      },
       returned: {
         allowNull: true,
         type: Sequelize.BOOLEAN

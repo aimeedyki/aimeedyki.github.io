@@ -19,17 +19,16 @@ module.exports = {
   //authenticates login
   auth(req, res, next){
     user1.findOne({where: {email: req.body.email}})
-    .then((user)=>{
-      bcrypt.compare(req.body.password, this.password,(err, isMatch)=>{
-        if(isMatch){
+    .then((user1)=>{
+      
+        if(req.body.password === user1.password){
               res.send('successful');
             } 
             else {
               res.send("password and email is incorrect");
             }
-          });
-        })
-    
+          })
+     
     .catch(error => console.log(error.message)); 
   },
 

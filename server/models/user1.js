@@ -5,14 +5,15 @@ module.exports = (sequelize, DataTypes)=> {
     email: DataTypes.STRING,
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
+    username: DataTypes.STRING,
     password: DataTypes.STRING,
     level: DataTypes.STRING,
     profilepic: DataTypes.STRING
   },//hashes password
   {  hooks: {
-       beforeCreate: (user) => {
+       beforeCreate: (user1) => {
          const salt = bcrypt.genSaltSync();
-         user.password = bcrypt.hashSync(user.password, salt);
+         user.password = bcrypt.hashSync(user1.password, salt);
        }
      },
     instanceMethods: {
@@ -24,20 +25,22 @@ module.exports = (sequelize, DataTypes)=> {
         },
     },
     
-  }, {
-    classMethods: {
-      associate: (models)=> {
+  }); 
+
+  user1.associate = (models) =>{
         // associations are defined here
-         user.hasMany(models.history, {
+         user1.hasMany(models.history, {
           foreignKey: 'user1Id',
           as: 'History',
         });
-        user.hasMany(models.notreturned, {
+         user1.hasMany(models.history, {
+          foreignKey: 'user1Id',
+          as: 'Userbook',
+        });
+        user1.hasMany(models.notreturned, {
           foreignKey: 'user1Id',
           as: 'Notreturned',
         });
-      }
-    }
-  });
+      };
   return user1;
 };

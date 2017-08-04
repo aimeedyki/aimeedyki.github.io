@@ -7,6 +7,7 @@ module.exports = {
       .create({
         title: req.body.title,
         borrowed: req.body.borrowed,
+        returned:req.body.returned,
         user1Id: req.params.user1Id,  
         })
       .then(history => res.status(201).send(history))
@@ -17,6 +18,7 @@ module.exports = {
     history.update({
           title: req.body.title,
           borrowed: req.body.borrowed,
+          returnDate: req.body.returnDate,
           returned: req.body.returned,
   },
     { where: { user1Id: req.params.user1Id, title:req.body.title } 
@@ -36,7 +38,7 @@ module.exports = {
 //display books not neturned
 returned(req, res) {
     return history
-    .all({ where: { user1Id: req.params.user1Id, returned: 'null',}})
+    .all({ where: { user1Id: req.params.user1Id, returned: req.query.returned}})
 
     .then(histories => res.status(200).send(histories))
     .catch(error => res.status(400).send(error.message));
