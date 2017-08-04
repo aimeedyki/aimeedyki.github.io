@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <title>hello books</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -16,7 +16,9 @@
     <!-- Header -->
 <div class="container-fluid">
     <div id="header">
+        <div>
         <h1 style="font-family: Comic Sans MS, cursive, sans-serif;">BOOKSVILLE</h1>
+        </div>
 		<div id="top">
 			<div id="top-navigation">
 				Welcome<strong> Administrator</strong>
@@ -37,11 +39,12 @@
 </div>
 <div id="container">
 	<div class="shell" >
+	    <!-- will implement later
 		<div id="dashboard" class="tabcontent">
 			<a href="#">Dashboard</a>
 		</div>
 		<!-- End Small Nav -->
-		
+        <!-- tab content to add books-->		
 		<div class="tabcontent" id="addBook">
 		    <div class="msg msg-ok">
 			    <p><strong>Your file was uploaded succesifully!</strong></p>
@@ -70,10 +73,9 @@
 			</div>
 			<br />
 		</div>
-
+        <!-- tab to modify books-->
 		<div class="tabcontent" id="modifyBooks">
 	    	<div id="content">
-				<div class="box">
 					<div class="table">
 						<table border="0" cellspacing="0" cellpadding="0" >
 							<tr>
@@ -153,9 +155,8 @@
                         </div>
 					</div>
 				</div>
-			</div>
 		</div>
-
+        <!-- notification tab-->
 		<div class="tabcontent" id="notifications">
 		    <div class="table">
 				<table border="0" cellspacing="0" cellpadding="0">
@@ -215,4 +216,3 @@
 	
 
 </body>
-<script src="index.js"></script>
