@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes)=> {
   {  hooks: {
        beforeCreate: (user1) => {
          const salt = bcrypt.genSaltSync();
-         user.password = bcrypt.hashSync(user1.password, salt);
+         user1.password = bcrypt.hashSync(user1.password, salt);
        }
      },
     instanceMethods: {

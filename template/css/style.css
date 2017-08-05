@@ -1,25 +1,14 @@
 * { padding:0; margin:0; outline:0; }
-body {
+.booksville{
   font-family: georgia, serif;
+  font-size: 90%;
+  background-image: url('"../images/booksbw2.jpg"');
   }
-/*responsiveness
-@media only screen and (max-width: 479px){
-    body { width: 90%; }
-}
-@media screen and (max-width: 320px) { 
-   #header a{
-        font-size: 50%; 
-     }    
-}
-
-@media screen and (max-width: 700px) { 
- a{
-    font-size: 120%;
-} 
-}
 
 /*sets background image for all pages*/
 #background-image{
+  width: 100%;
+  height: 400px;
   background-image: url("../images/booksbw2.jpg"); 
   background-size: cover;
    position: center;
@@ -28,34 +17,61 @@ body {
     z-index:0;
 }
 /*header for all pages*/
-#header { 
-  height:89px; 
-  background-color: #800080; 
-  white-space:nowrap;
-  color: white;
-  border: 3px solid #ccc; 
+h1, h2 {
+  margin-top: 10px;
+  font-size: 34px;
+    font-weight: 100;
+    color: #555;
+    line-height: 48px;
 }
-#header h1, #header h3{
- float:left; 
- display:inline-block; 
- padding-top: 8px;
- margin-left: 3px; 
+body {
+  background: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #888;
+    line-height: 28px;
+    text-align: center;
 }
-/*navigation icons at the top*/
+
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  .forms-right-icons .icon { font-size: 22px; }
+  
+}
+
+@media (max-width: 767px) {
+  
+  .show-forms, .forms-right-icons, .forms-right-icons .icon { text-align: center; }
+  .forms-right-icons .icon { padding-top: 10px; }
+  .forms-right-icons h3 { margin-top: 15px; }
+  
+}
+
+@media (max-width: 415px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  h1, h2 { font-size: 28px; }
+
+}
+/*header properties*/
 #top { 
   height:53px;
   }
-  #top-navigation { 
+  a.header  { 
     float:right; 
     white-space:nowrap;
     color: white;
-    padding-top:15px;
-    margin-right: 3px;
+    padding-top:1%;
+    margin-right: 3%;
     }
-#top-navigation a{ 
+.top-navigation a{ 
   color:white; 
 }
-#top-navigation span{ 
+.top-navigation span{ 
   color:#dca598; 
 }
 /*tab for login and registration*/
@@ -70,7 +86,29 @@ div.tab {
   border-radius: 15px;
 }
 /*for userpage*/
-div.tab2 {
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}div.tab2 {
     float: left;
     border: 1px solid #ccc;
     background-color: #800080;
@@ -81,12 +119,11 @@ div.tab2 {
 }
 /*for adminpage*/
 div.tab3 { 
-  height:53px;
-  width: 376px; 
-  float: center;
-  margin-left: 380px;
+  height:53%;
+  width: 41%; 
+  margin-left: 20%
   outline: 5px solid #800080;
-  background-color: white;
+  background-color: #800080;
 }
 /* Style the buttons inside the tab */
 div.tab button, div.tab2 button {
@@ -156,6 +193,12 @@ div.tab3 button{
   border-radius:10px;
   border: 2px solid white;
 }
+button#googleplus {
+    border-color: #111;
+    background-color: #222;
+    text-shadow: #333 -1px -1px 0;
+    background-image:url(http://www.iconsdb.com/icons/preview/white/google-plus-xxl.png);
+}
 .social-login { margin-top: 35px; color: #fff; }
 .social-login-buttons { margin-top: 20px; }
 .btn-link-1 {
@@ -212,13 +255,14 @@ div.gallery {
     margin: 5px;
     float: left;
     width: 180px;
+    overflow:scroll; height:300px;
 }
 div.gallery:hover {
     border: 1px solid #777;
 }
 div.gallery img {
     width: 100%;
-    height: 20%;
+    height: 50%;
     color:   #E9967A;
 }
 div.desc {
@@ -227,41 +271,19 @@ div.desc {
     color: #800080;
     background-color:   white;
   }
-/*format for displaying table*/
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 50%;
-    border: 1px solid #ddd;
-}
-th, td {
-    border: none;
-    text-align: left;
-    padding: 8px;
-}
-th{
-  background-color: #800080;
-  color: white;
-}
 /*formating for user profile*/
-.profile-card {
-    margin: 50px;
-    width: 500px;
-    height: 400px;
-    font: 12px "Myriad Pro";
-}
 .avatar{
     border-radius: 100px;
     border: 5px solid #800080;
 }
 .avatar:hover {
-    margin-top: 23px;
+    margin-top: 23%;
 }
 div.profile-details {
     color: white;
     float: center;
-    margin-left: 600px;
-    margin-right: 460px;
+    /*margin-left: 60%;
+    margin-right: 46%;*/
     text-align: center;
     font-weight: bold;
     background-color: #800080;
@@ -270,8 +292,8 @@ div.profile-details {
 }
 .profile-content {
     float: center;
-    margin-left: 600px;
-    margin-right: 460px;
+    /*margin-left: 600px;
+    margin-right: 460px;*/
     
 }
 .digits {
@@ -291,7 +313,6 @@ ul{
     overflow: hidden;
     background-color: #800080;
     color: white;
-    border-radius: 10px;
     float: center;
     height: 25px
     width:20%;
@@ -302,24 +323,17 @@ li {
     text-align: center;
 }
 
-#container { 
-  padding:20px 0;}
+
 /*success message*/
 .msg { 
   position:relative; 
-  padding-right:35px; 
-  margin-bottom:10px; }
-.msg p{ 
-  padding:9px 10px 9px 40px; 
-  font-size:12px; 
-  background-repeat:no-repeat; 
-  background-position:10px 5px;}
+  padding-right:25%; 
+  margin-bottom:10%; }
 .msg a.close{ 
   font-size:0; 
   line-height:0; 
   position:absolute; 
   top:0; right:0; 
-  width:34px; height:34px; 
   background:url(images/close.gif); 
   text-indent: -4000px;
 }
@@ -332,14 +346,14 @@ li {
 .box-head { 
   border-radius: 20px;
   background:#800080; 
-  height:35px; 
-  color:#fff; padding: 0 10px;
-  line-height:60px; 
+  height:35%; 
+  color:#fff; padding: 0 10%;
+  line-height:60%; 
   white-space:nowrap; 
   border-bottom:solid 2px white; }
 .box-head .right{ 
-  padding-top:5px; 
-  line-height:13px;}
+ /* padding-top:5px; 
+  line-height:13px;}*/
 .field { border:solid 1px #d3cfc7; 
   background:#fff; 
   padding:5px; }
@@ -358,21 +372,13 @@ li {
   padding:7px 10px; 
   border-bottom:solid 1px #d2d1cb;}
 .table td{ 
-  background:#fbfcfc; 
+  background-color: white; 
   border-bottom:solid 1px #e0e0e0; 
   padding:8px 10px; }
 .table tr.odd td{ 
   background:#f8f8f8; }
 .table tr:hover td{ 
   background:#fff9e1; }
-a.ico { 
-  color:#9d9c9a; 
-  font-size:10px; 
-  text-decoration: none; 
-  padding:0 0 0 14px; 
-  background-repeat:no-repeat; 
-  background-position:0 0; }
-a.ico:hover { color:#333;}
 
 
 

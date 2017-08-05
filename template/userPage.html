@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <title>hello books</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width initial-scale= 1.0">
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -15,26 +15,36 @@
 
 
 <!--head of the page-->
-<body id="background-image">
-    <div class="container-fluid">
-      <div id="header">
-        <div>
-        <h1 style="font-family: Comic Sans MS, cursive, sans-serif;" style="color: white">WELCOME BACK!</h1>
+<body class="booksville" id="background-image">
+    <div class="header">
+      <div class="container">
+      
+      <div class="row">
+        <div style="background-color: #800080;">
+            <h2 style="color: white; font-family: Comic Sans MS, cursive, sans-serif;"" >WELCOME BACK</h2>
         </div>
-        <div id="top-navigation" style="color: #8B008B;">
-				<a href="#">Help</a>
-				<span>|</span>
-				<a href="#">Profile Settings</a>
-				<span>|</span>
-				<a href="#">Log out</a>
+        <div align="right">
+          <ul style="color: white;">
+              <li>
+                  <a style="color: white;" class="page-scroll" href="#about">Help</a>
+              </li>
+              <li>
+                  <a style="color: white;" class="page-scroll" href="#services">Profile settings</a>
+              </li>
+               <li>
+                  <a style="color: white;" class="page-scroll" href="#about">Log out</a>
+              </li>
+          </ul>
         </div>
-	  </div>
-    <!--side tab for navigation-->
-    <div class="tab2" >
-          <button style="color: white;" class="tablinks" onclick="openTab(event, 'library')">LIBRARY</button>
-          <button style="color: white;" class="tablinks" onclick="openTab(event, 'profile')">PROFILE</button>
-          <button style="color: white;" class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</button>
-          <button style="color: white;" class="tablinks" onclick="openTab(event, 'history')">HISTORY</button>
+    </div>
+    </div>
+   <!--side tab for navigation-->
+    <div class="topnav" id="myTopnav">
+      <a style="color: white;" class="tablinks" onclick="openTab(event, 'library')">LIBRARY</a>
+       <a style="color: white;" class="tablinks" onclick="openTab(event, 'profile')">PROFILE</a>
+       <a style="color: white;" class="tablinks" onclick="openTab(event, 'unreturned')">NOT YET RETURNED</a>
+       <a style="color: white;" class="tablinks" onclick="openTab(event, 'history')">HISTORY</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <!--displays when library button is clicked-->
     <div id="library" class="tabcontent">
@@ -42,17 +52,7 @@
         <input type="text" class="input-medium search-query">
         <button type="submit" class="btn">Search</button>
         </form>
-        <div class="pagination">
-          <a href="#">&laquo;</a>
-          <a href="#" class="active">1</a>
-          <a href="#" >2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">6</a>
-          <a href="#">&raquo;</a>
-        </div>
-        <div class="gallery">
+         <div class="gallery">
           <a target="_blank">
           <img src="images/magicobt.jpg" alt="The magic of big thinking" width="300" height="200">
           </a>
@@ -106,22 +106,19 @@
           <div class="desc">12 copies available</div>
           <button type="submit" class="btn">Borrow</button>
         </div>
-        <br>
-        
     </div>
    <!-- displays user profile-->
-      <div id="profile" class="tabcontent" class="profile-card" align="center">
+    <div id="profile" class="tabcontent" class="profile-card" align="center">
         <div class="profile-avatar">
           <a href="#"><img src="images/profilephoto.jpg" class="avatar" /></a>
           <div class="btns-container">
             <div class="profile-links">
-                <a class="zoom" href="#"><img src="images/zoomicon.png"></a>
-                <a class="edit" href="#"><img src="images/editicon.png"></a>
+                <a class="edit" style="color: white;" href="#">Edit Profile</a>
             </div>
           </div>
         </div>
         <div class="profile-details">
-                <h1>Grace Joel</h1>
+                <h1 style="color: white;">Grace Joel</h1>
                 <h3>Rookie</h3>
         </div>
         <div class="profile-content">
@@ -139,9 +136,9 @@
         </div>
       </div>
       <!-- displays tab for unreturned books-->
-      <div id="unreturned" class="tabcontent" align="center" style="color: #800080;
+      <div id="unreturned" class="tabcontent" align="center" >
+        <table cellspacing="0" style="color: #800080;
     background-color: white;">
-        <table cellspacing="0">
             <tr>
                 <th>Title</th>
                 <th>Date Borrowed</th>
@@ -150,24 +147,24 @@
             <tr>
                 <td id="title">The beautiful ones are not yet born</td>
                 <td id="dateB">12/01/2017</td>
-                <td id="return"><a>RETURN</a></td>
+                <td ><a>RETURN</a></td>
             </tr>
             <tr>
                 <td id="title">There was a country</td>
                 <td id="dateB">16/04/2017</td>
-                <td id="return"><a>RETURN</a></td>
+                <td ><a>RETURN</a></td>
             </tr>
             <tr>
                 <td id="title">The beautiful ones are not yet born</td>
                 <td id="dateB">12/01/2017</td>
-                <td id="return"><a>RETURN</a></td>
+                <td><a>RETURN</a></td>
             </tr>
         </table>
       </div>
       <!-- displays users' history-->
-      <div id="history" class="tabcontent" align="center" style="color: #800080;
+      <div id="history" class="tabcontent" align="center">
+          <table cellspacing="0" style="color: #800080;
     background-color: white;">
-          <table cellspacing="0">
             <tr>
                 <th>Title</th>
                 <th>Date Borrowed</th>
