@@ -1,12 +1,13 @@
 const history = require('../models').history;
 
 module.exports = {
-  //user borrows a book and creates a historyrecord
+  //user borrows a book and creates a history record
   create(req, res) {
     return history
       .create({
         title: req.body.title,
         borrowed: req.body.borrowed,
+        returned:req.body.returned,
         user1Id: req.params.user1Id,  
         })
       .then(history => res.status(201).send(history))
@@ -17,9 +18,10 @@ module.exports = {
     history.update({
           title: req.body.title,
           borrowed: req.body.borrowed,
+          returnDate: req.body.returnDate,
           returned: req.body.returned,
   },
-    { where: { id: req.params.id } 
+    { where: { user1Id: req.params.user1Id, title:req.body.title } 
   })
       .then(history => res.status(201).send("book returned"))
       .catch(error => console.log(error.message)); 
@@ -33,6 +35,13 @@ module.exports = {
     .then(histories => res.status(200).send(histories))
     .catch(error => res.status(400).send(error.message));
 },
+//display books not neturned
+returned(req, res) {
+    return history
+    .all({ where: { user1Id: req.params.user1Id, returned: req.query.returned}})
 
+    .then(histories => res.status(200).send(histories))
+    .catch(error => res.status(400).send(error.message));
+},
 
 }
